@@ -6,6 +6,8 @@ struct FANConstant{
     static let NATIVE_AD_CHANNEL = MAIN_CHANNEL + "/nativeAd";
     static let NATIVE_BANNER_AD_CHANNEL = MAIN_CHANNEL + "/nativeBannerAd";
     static let INTERSTITIAL_AD_CHANNEL = MAIN_CHANNEL + "/interstitialAd";
+    static let REWARDED_VIDEO_AD_CHANNEL = MAIN_CHANNEL +
+    "/rewardedAd";
     
     static let ERROR_METHOD = "error";
     static let LOADED_METHOD = "loaded";

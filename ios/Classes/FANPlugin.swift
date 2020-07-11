@@ -19,11 +19,15 @@ public class FANPlugin: NSObject, FlutterPlugin {
             FacebookAudienceNetworkNativeBannerAdFactory(_registrar: registrar),
             withId: FANConstant.NATIVE_BANNER_AD_CHANNEL
         )
-        
+                
         //init
         let FANPluginChannel: FlutterMethodChannel = FlutterMethodChannel.init(name: FANConstant.MAIN_CHANNEL, binaryMessenger: registrar.messenger())
         
+        let rewardedAdChannel: FlutterMethodChannel = FlutterMethodChannel.init(name: FANConstant.REWARDED_VIDEO_AD_CHANNEL, binaryMessenger: registrar.messenger())
+        
         FANPluginFactory.init(_channel: FANPluginChannel)
+        
+        FANRewardedAdPluginFactory.init(_channel: rewardedAdChannel)
         
         let interstitialAdChannel: FlutterMethodChannel = FlutterMethodChannel.init(name: FANConstant.INTERSTITIAL_AD_CHANNEL, binaryMessenger: registrar.messenger())
         
